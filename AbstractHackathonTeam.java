@@ -77,9 +77,8 @@ public abstract class AbstractHackathonTeam {
     public void setUniversity(String university) {
         this.university = university;
     }
-
-    // ⭐ ADD THIS METHOD TO FIX THE COMPILATION ERROR ⭐
     public void setCategory(String category) {
         this.category = category;
     }
+
 }
