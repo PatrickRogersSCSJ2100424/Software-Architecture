@@ -159,7 +159,6 @@ public class JudgeGUIView extends JFrame {
         }
     }
     
-    // NEW HELPER METHOD for 0-5 validation
     private boolean isScoreValid(int score) {
         return score >= 0 && score <= 5;
     }
@@ -204,4 +203,5 @@ public class JudgeGUIView extends JFrame {
         manager.generateReportAndWriteToFile();
         JOptionPane.showMessageDialog(this, "Report generated successfully. Check HackathonReport.txt", "Report Success", JOptionPane.INFORMATION_MESSAGE);
     }
+
 }
