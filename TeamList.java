@@ -10,7 +10,6 @@ import java.util.Map;
 
 public class TeamList {
     private List<AbstractHackathonTeam> teams;
-    // ⭐ NEW: Field to track the next available ID ⭐
     private int nextTeamId = 101; 
 
     private final List<String> availableCategories;
@@ -24,7 +23,6 @@ public class TeamList {
         this.judgeAssignments = new HashMap<>();
     }
     
-    // ⭐ MODIFIED: Updated to track the highest ID when a team is added ⭐
     public void addTeam(AbstractHackathonTeam team) {
         teams.add(team);
         // Ensure the counter is always ahead of the highest existing team number
@@ -33,12 +31,10 @@ public class TeamList {
         }
     }
     
-    // ⭐ NEW: Getter for the next ID (used when creating a new team) ⭐
     public int getNextTeamId() {
         return nextTeamId;
     }
 
-    // ⭐ NEW: Setter to reset the ID counter after loading data from a file ⭐
     public void setNextTeamId(int nextId) {
         this.nextTeamId = nextId;
     }
@@ -134,4 +130,5 @@ public class TeamList {
     public String getJudgeForTeam(int teamNumber) {
         return judgeAssignments.getOrDefault(teamNumber, "Unassigned");
     }
+
 }
