@@ -1,0 +1,44 @@
+--- HACKATHON SYSTEM FINAL REPORT ---
+Generated on: Sat Nov 29 21:34:32 MYT 2025
+Total Teams Processed: 20
+Average Overall Score: 1.44 (max 5.0)
+Top Scoring Team: Web Masters (105) with a score of 2.15
+
+--- Score Distribution (Individual Score Frequency 0-10) ---
+Score | Count
+------|------
+    0 |     0
+    1 |     4
+    2 |    17
+    3 |    21
+    4 |    32
+    5 |    26
+    6 |     0
+    7 |     0
+    8 |     0
+    9 |     0
+   10 |     0
+
+--- Full Team List (Ranked by Overall Score) ---
+Rank  | ID              | Name                           | Category        | Eligibility     | Score      | Assigned Judge      
+-----------------------------------------------------------------------------------------------------------------
+1     | 105             | Web Masters                    | Web Development | Eligible        | 2.15       | Unassigned          
+2     | 100             | Code Innovators                | Web Development | Eligible        | 1.95       | Unassigned          
+3     | 114             | Code Warriors                  | Web Development | Eligible        | 1.85       | Unassigned          
+4     | 116             | Digital Pioneers               | Mobile Applications | Eligible        | 1.60       | Unassigned          
+5     | 119             | Vision Coders                  | Artificial Intelligence | Eligible        | 1.60       | Unassigned          
+6     | 103             | Data Pioneers                  | Data Science    | Eligible        | 1.50       | Unassigned          
+7     | 108             | Code Dreamers                  | Mobile Applications | Eligible        | 1.50       | Unassigned          
+8     | 117             | NextGen Coders                 | Cybersecurity   | Eligible        | 1.50       | Unassigned          
+9     | 118             | App Gurus                      | Mobile Applications | Eligible        | 1.50       | Unassigned          
+10    | 112             | Byte Force                     | Web Development | Eligible        | 1.45       | Unassigned          
+11    | 104             | Quantum Hackers                | Cybersecurity   | Eligible        | 1.40       | Unassigned          
+12    | 110             | Secure Minds                   | Cybersecurity   | Eligible        | 1.40       | Unassigned          
+13    | 101             | Cyber Titans                   | Cybersecurity   | Eligible        | 1.30       | Unassigned          
+14    | 113             | Algo Masters                   | Artificial Intelligence | Eligible        | 1.30       | Unassigned          
+15    | 115             | Green Techies                  | Sustainability Tech | Eligible        | 1.30       | Unassigned          
+16    | 107             | Smart Solutions                | Artificial Intelligence | Eligible        | 1.20       | Unassigned          
+17    | 102             | AI Vision                      | Artificial Intelligence | Eligible        | 1.10       | Unassigned          
+18    | 106             | Pixel Coders                   | Mobile Applications | Eligible        | 1.10       | Unassigned          
+19    | 109             | Tech Visionaries               | Artificial Intelligence | Eligible        | 1.10       | Unassigned          
+20    | 111             | Cloud Ninjas                   | Cloud Computing | Eligible        | 1.10       | Unassigned          
