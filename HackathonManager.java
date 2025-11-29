@@ -25,9 +25,6 @@ public class HackathonManager {
         return false;
     }
 
-    /**
-     * FIX 1: Overloaded method to update only Name and University, used by the Staff GUI.
-     */
     public boolean updateTeamDetails(int teamNumber, String newName, String newUniversity) {
         AbstractHackathonTeam team = teamList.findTeamByNumber(teamNumber);
         if (team != null) {
@@ -39,9 +36,6 @@ public class HackathonManager {
         return false;
     }
 
-    /**
-     * Original method to perform a full update (5 arguments).
-     */
     public boolean updateTeamDetails(int teamNumber, String newName, String newUniversity, String newCategory, boolean newEligibility) {
         AbstractHackathonTeam team = teamList.findTeamByNumber(teamNumber);
         if (team != null) {
@@ -222,4 +216,5 @@ public class HackathonManager {
     public TeamList getTeamList() {
         return teamList;
     }
+
 }
