@@ -25,7 +25,6 @@ public class UserRepository {
         
         // Judge: Scoring Access
         users.add(new JudgeUser("judge1", "judgepass"));
-        users.add(new JudgeUser("judge2", "judgepass"));
         
         // Staff: Details and Eligibility Access
         users.add(new StaffUser("staff1", "staffpass"));
@@ -39,4 +38,5 @@ public class UserRepository {
         }
         return null;
     }
+
 }
