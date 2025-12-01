@@ -17,7 +17,7 @@ public class HackathonManager {
         AbstractHackathonTeam team = teamList.findTeamByNumber(teamNumber);
         if (team != null && newScores != null && newScores.length == 5) {
             for(int score : newScores) {
-                if (score < 0 || score > 10) return false;
+                if (score < 0 || score > 5) return false;
             }
             team.setScores(newScores);
             return true;
@@ -36,6 +36,9 @@ public class HackathonManager {
         return false;
     }
 
+    /**
+     * Original method to perform a full update (5 arguments).
+     */
     public boolean updateTeamDetails(int teamNumber, String newName, String newUniversity, String newCategory, boolean newEligibility) {
         AbstractHackathonTeam team = teamList.findTeamByNumber(teamNumber);
         if (team != null) {
@@ -174,16 +177,18 @@ public class HackathonManager {
             
             AbstractHackathonTeam topTeam = teamList.getTopTeam();
             if (topTeam != null) {
-                bw.write("Top Scoring Team: " + topTeam.getTeamName() + " (" + topTeam.getTeamNumber() + ") with a score of " + String.format("%.2f", topTeam.getOverallScore()) + "\n");
+                bw.write("Top Scoring Team: " + topTeam.getTeamName() + " (" 
+                        + topTeam.getTeamNumber() + ") with a score of " + String.format("%.2f", topTeam.getOverallScore()) + "\n");
             } else {
                 bw.write("No teams available to calculate top team.\n");
             }
-            
-            bw.write("\n--- Score Distribution (Individual Score Frequency 0-10) ---\n");
+
+            bw.write("\n--- Score Distribution (Individual Score Frequency 0-5) ---\n");
             int[] frequency = teamList.calculateScoreFrequency();
             bw.write("Score | Count\n");
             bw.write("------|------\n");
-            for (int i = 0; i < frequency.length; i++) {
+            
+            for (int i = 0; i <= 5 && i < frequency.length; i++) { 
                 bw.write(String.format("%5d | %5d\n", i, frequency[i]));
             }
             
@@ -216,5 +221,4 @@ public class HackathonManager {
     public TeamList getTeamList() {
         return teamList;
     }
-
 }
