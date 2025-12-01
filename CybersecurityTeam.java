@@ -15,26 +15,23 @@ public class CybersecurityTeam extends AbstractHackathonTeam {
     /**
      * Calculates the overall score (0-5) using a weighted average specific to Cybersecurity.
      */
-    @Override
-    public double getOverallScore() {
-        if (!eligibility) return 0.0;
-        if (scores.length != 5) return 0.0;
-        
-        // Weighted Average Calculation (total weighted score max 10.0)
-        double weightedTotalOutOf10 = 
-            (scores[0] * 0.10) + 
-            (scores[1] * 0.15) + 
-            (scores[2] * 0.30) + 
-            (scores[3] * 0.25) +  
-            (scores[4] * 0.20); 
-
-        if (adheresToSecurityStandards) {
-             weightedTotalOutOf10 += 0.5;
-        }
-        double finalScore = (weightedTotalOutOf10 / 10.0) * 5.0; 
-
-        return Math.min(5.0, finalScore); 
+   @Override
+public double getOverallScore() {
+    if (!eligibility) {
+        return 0.0;
     }
+    double weightedScore = 
+        (scores[0] * 0.10) +  
+        (scores[1] * 0.15) +  
+        (scores[2] * 0.30) +  
+        (scores[3] * 0.25) +  
+        (scores[4] * 0.20);   
+    if (adheresToSecurityStandards) {
+        weightedScore += 0.5; 
+    }
+    weightedScore = Math.max(0, weightedScore);
+    return Math.min(5.0, weightedScore); 
+}
     
     @Override
     public String getUniqueAttributeDetails() {
