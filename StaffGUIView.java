@@ -219,4 +219,5 @@ public class StaffGUIView extends JFrame {
         manager.generateReportAndWriteToFile();
         JOptionPane.showMessageDialog(this, "Report generated successfully. Check HackathonReport.txt", "Report Success", JOptionPane.INFORMATION_MESSAGE);
     }
+
 }
