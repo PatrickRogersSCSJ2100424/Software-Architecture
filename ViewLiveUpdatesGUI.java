@@ -170,7 +170,9 @@ public class ViewLiveUpdatesGUI extends JFrame {
                 return;
             }
 
-            int teamNumber = nextTeamNumber++;
+            int teamNumber = nextTeamNumber;
+            nextTeamNumber++;
+            
             AbstractHackathonTeam team = new AbstractHackathonTeam(
                     teamNumber, teamName, category, university, false, leaderName, new int[]{0,0,0,0,0}) {
                 @Override
@@ -186,4 +188,3 @@ public class ViewLiveUpdatesGUI extends JFrame {
         }
     }
 }
-
