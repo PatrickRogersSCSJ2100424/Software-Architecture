@@ -560,4 +560,5 @@ public class AdminGUIView extends JFrame {
             JOptionPane.showMessageDialog(this, "Please enter a valid numeric Team ID to remove.", "Input Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
 }
