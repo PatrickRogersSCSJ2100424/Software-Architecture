@@ -2,10 +2,6 @@ package hackathonsystem.model;
 
 import java.util.Arrays;
 
-/**
- * Abstract base class for all hackathon teams.
- * Defines common attributes, the 7-argument constructor, and forces subclasses to implement unique scoring logic.
- */
 public abstract class AbstractHackathonTeam {
     
     protected int teamNumber;
@@ -82,3 +78,4 @@ public abstract class AbstractHackathonTeam {
     }
 
 }
+
