@@ -11,24 +11,23 @@ public class WebDevTeam extends AbstractHackathonTeam {
     }
 
     @Override
-    public double getOverallScore() {
-        if (!eligibility) return 0.0;
-        
-        double sum = Arrays.stream(scores).sum(); 
-        double scoreOutOf50 = sum;
-        
-        if (usesModernFramework) {
-            scoreOutOf50 += 2.5; 
-        } else {
-            scoreOutOf50 -= 5.0; 
-        }
-
-        scoreOutOf50 = Math.max(0, scoreOutOf50);
-        
-        double finalScore = scoreOutOf50 / 10.0; 
-
-        return Math.min(5.0, finalScore); 
+public double getOverallScore() {
+    if (!eligibility) {
+        return 0.0;
     }
+    double totalScore = 0;
+    for (int score : scores) {
+        totalScore += score;
+    }
+    if (usesModernFramework) {
+        totalScore += 2.5; 
+    } else {
+        totalScore -= 5.0; 
+    }
+    totalScore = Math.max(0, totalScore);
+    double finalScore = totalScore / 5.0; 
+    return Math.min(5.0, finalScore); 
+}
     
     @Override
     public String getUniqueAttributeDetails() {
